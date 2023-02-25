@@ -1,0 +1,51 @@
+@import './mixins.scss';
+
+.news-element{
+    margin-top: 70px;
+    text-align: center;
+    .news-element__button{
+        @include whiteButton;
+    }
+    .news-element__title{
+        @include title;
+        margin-top: 40px;
+    }
+    .news-element__container{
+        margin-top: 80px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        .news-element__container-title{
+            @include title;
+            font-size: 28px;
+        }
+        .news-element__container-list{
+            margin-top: 30px;
+            @include smallestText(#d5621d);
+            opacity: 0.9;
+            text-align: start;
+            li + li{
+                margin-top: 15px;
+            }
+        }
+    }
+}
+@media (max-width: 580px){
+    .news-element{
+        .news-element__container{
+            .news-element__container-title{
+                font-size: 24px;
+            }
+        }
+    }
+}
+@media (max-width: 400px){
+    .news-element{
+        .news-element__container{
+            .news-element__container-list{
+                text-align: center;
+            }
+        }
+    }
+}

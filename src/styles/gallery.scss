@@ -1,0 +1,64 @@
+@import "./mixins.scss";
+
+.gallery-block {
+  margin-top: 70px;
+  text-align: center;
+  .gallery-block__button {
+    @include whiteButton;
+  }
+  .gallery-block__title {
+    @include title;
+    margin-top: 40px;
+  }
+
+  .gallery-block__container {
+    margin-top: 80px;
+    display: grid;
+    gap: 24px;
+    grid-template-columns: repeat(4, 215px);
+    justify-content: center;
+    img {
+      height: 260px;
+      width: 215px;
+    }
+    &:hover img:not(:hover) {
+      opacity: 0.4;
+    }
+    .gallery-block__container-unique{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        .unique-more {
+            position: absolute;
+            width: 60px;
+            height: 60px;
+            background-color: inherit;
+          }
+          .unique-img{
+            position: relative;
+            opacity: 0.1;
+          }
+    }
+  }
+}
+@media (max-width: 950px){
+  .gallery-block{
+    .gallery-block__container{
+      grid-template-columns: repeat(3, 215px);
+    }
+  }
+}
+@media (max-width: 580px){
+  .gallery-block{
+    .gallery-block__container{
+      grid-template-columns: repeat(2, 215px);
+    }
+  }
+}
+@media (max-width: 400px){
+  .gallery-block{
+    .gallery-block__container{
+      grid-template-columns: repeat(1, 215px);
+    }
+  }
+}

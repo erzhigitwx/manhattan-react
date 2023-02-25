@@ -1,0 +1,81 @@
+@import "./mixins.scss";
+.film-list {
+  margin-top: 70px;
+  text-align: center;
+  .film-list__button {
+    @include whiteButton;
+  }
+  .film-list__title {
+    margin-top: 40px;
+    @include title;
+  }
+  img {
+    height: 260px;
+    width: 215px;
+  }
+  .film-list__container{
+    margin-top: 80px;
+    display: grid;
+    gap: 24px;
+    grid-template-columns: repeat(4, 215px);
+    justify-content: center;
+    &:hover img:not(:hover){
+      opacity: 0.2;
+    }
+    .unique{
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      align-items: flex-start;
+      .unique-img{
+        position: relative;
+        background: #210E09;
+        opacity: 0.1;
+      }
+      .unique-content{
+        margin: 20px;
+        position: absolute;
+        height: 130px;
+        width: 236px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: flex-start;
+        text-align: start;
+        .unique-content__button{
+          @include yellowButton;
+          @include smallestText(#ffffff);
+        }
+        .unique-content__text{
+          @include smallP;
+          font-size: 14px
+        }
+        .unique-content__price{
+          @include button;
+          padding: 10px;
+        }
+      }
+    }
+  }
+}
+@media (max-width: 950px){
+  .film-list{
+    .film-list__container{
+      grid-template-columns: repeat(3, 215px);
+    }
+  }
+}
+@media (max-width: 580px){
+  .film-list{
+    .film-list__container{
+      grid-template-columns: repeat(2, 215px);
+    }
+  }
+}
+@media (max-width: 400px){
+  .film-list{
+    .film-list__container{
+      grid-template-columns: repeat(1, 215px);
+    }
+  }
+}

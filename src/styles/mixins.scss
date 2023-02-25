@@ -1,0 +1,73 @@
+@mixin button {
+  font-family: Poppins, sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 150%;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  padding: 15px 30px;
+  gap: 10px;
+  border: 2px solid #d5621d;
+  border-radius: 5px;
+  &:hover {
+    filter: opacity(0.7);
+    cursor: pointer;
+  }
+}
+@mixin yellowButton {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 8px 15px;
+  gap: 8px;
+  background: #d5621d;
+  border-radius: 5px;
+}
+@mixin whiteButton {
+  font-family: "Montserrat", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 150%;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: #210e09;
+  cursor: pointer;
+  padding: 10px 20px 7px;
+  gap: 10px;
+  background: #ffffff;
+  border-radius: 5px;
+  &:hover {
+    background-color: gray;
+  }
+}
+@mixin title {
+  font-family: "Montserrat", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 40px;
+  line-height: 150%;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+@mixin smallP {
+  width: 232px;
+  height: 27px;
+  font-family: "Montserrat", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 150%;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: #ffffff;
+}
+@mixin smallestText($color) {
+  font-family: "Poppins", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 150%;
+  color: $color;
+}

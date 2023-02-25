@@ -1,0 +1,97 @@
+@import "./mixins.scss";
+
+.collab-block {
+  margin-top: 70px;
+  text-align: center;
+  .collab-block__button {
+    @include whiteButton;
+  }
+  .collab-block__title {
+    @include title;
+    margin-top: 40px;
+  }
+  .collab-block__content {
+    margin-top: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    .collab-block__content-container {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .collab-block__content-title {
+      @include title;
+      font-size: 24px;
+      margin-bottom: 80px;
+    }
+    .collab-block__content-right,
+    .collab-block__content-left {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+      img {
+        height: 90px;
+        width: 90px;
+      }
+      p {
+        @include smallP;
+        width: 376px;
+        margin-top: 40px;
+      }
+    }
+  }
+}
+.collab-list {
+  margin-top: 100px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  .collab-list__title {
+    @include title;
+    font-size: 24px;
+  }
+  .collab-list__content {
+    margin-top: 60px;
+    @include smallestText(#ffffff);
+    li {
+      display: flex;
+      justify-content: flex-start;
+    }
+    li + li {
+      margin-top: 20px;
+    }
+  }
+}
+@media (max-width: 580px) {
+  .collab-block {
+    .collab-block__title {
+      font-size: 28px;
+    }
+    .collab-block__content {
+      .collab-block__content-container {
+        .collab-block__content-right,
+        .collab-block__content-left {
+          p {
+            font-size: 15px;
+          }
+        }
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        div + div {
+          margin-top: 80px;
+        }
+      }
+    }
+  }
+  .collab-list {
+    .collab-list__content{
+        font-size: 10px;
+    }
+  }
+}

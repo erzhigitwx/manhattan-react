@@ -1,0 +1,498 @@
+@import "./mixins.scss";
+
+.home-block {
+  font-family: "Montserrat", sans-serif;
+  margin-top: 55px;
+  display: flex;
+  justify-content: space-between;
+  .block-container {
+    overflow: hidden;
+    display: flex;
+    justify-content: start;
+    align-items: flex-end;
+    .home-block__back {
+      position: relative;
+      border-radius: 5px;
+      width: 100%;
+      height: 540px;
+      object-fit: cover;
+      &:hover {
+        transform: scale(1.05);
+      }
+    }
+    .block-container__elems {
+      margin: 0 0 0 50px;
+      text-align: start;
+      height: 200px;
+      width: 400px;
+      display: flex;
+      flex-direction: column;
+      position: absolute;
+    }
+    .button-about {
+      @include whiteButton;
+      width: 30%;
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+    }
+    .home-block__title {
+      width: 623px;
+      height: 120px;
+      @include title;
+    }
+  }
+
+  //   filmList
+
+  .list-films {
+    width: 416px;
+    height: 540px;
+    display: flex;
+    flex-direction: column;
+    //   header
+    .list-films_switch {
+      width: 100%;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+
+      .list-films__switch-item {
+        width: 208px;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        padding: 12px 10px 7px;
+        gap: 10px;
+        background: rgba(213, 98, 29, 0.1);
+        border-radius: 5px 5px 0px 0px;
+        cursor: pointer;
+      }
+      .item-2 {
+        background: rgba(213, 98, 29, 0.05);
+      }
+    }
+    //   content
+    .list-films__container {
+      width: 100%;
+      height: 502px;
+      background-color: rgba(213, 98, 29, 0.1);
+      display: grid;
+      grid-template-columns: repeat(2, 160px);
+      grid-template-rows: repeat(2, 200px);
+      gap: 26px;
+      justify-content: center;
+      align-content: center;
+      img {
+        cursor: pointer;
+      }
+      .film5 {
+        object-fit: cover;
+        width: 346px;
+        height: 436px;
+      }
+      border-radius: 0 0px 5px 5px;
+    }
+  }
+}
+
+.menu-food {
+  margin-top: 120px;
+  text-align: center;
+  .menu-food__button {
+    @include whiteButton;
+  }
+  .menu-food__title {
+    margin-top: 40px;
+    @include title;
+  }
+  .menu-food__container {
+    margin-top: 80px;
+  }
+  .food-item {
+    height: 110px;
+    width: 485px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 30px;
+    gap: 25px;
+    .food-photo {
+      width: 110px;
+      height: 110px;
+    }
+    .row {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      text-align: start;
+    }
+    .food-name {
+      @include smallP;
+    }
+    .food-price {
+      @include button;
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      padding: 2px 5px;
+      width: 84px;
+      height: 38px;
+    }
+    .food-mass {
+      @include smallestText(#d5621d);
+      margin-top: 5.5px;
+    }
+    .food-des {
+      @include smallestText(#ffffff);
+      text-align: start;
+    }
+    .food-character {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+  }
+  .swiper-button-next,
+  .swiper-button-prev {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+    gap: 10px;
+    width: 30px;
+    height: 30px;
+    background: #d5621d;
+    color: #ffffff;
+    border-radius: 5px;
+  }
+  .swiper-slide {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .swiper-pagination-bullet-active {
+    background-color: #d5621d;
+  }
+}
+.content-block {
+  margin: 200px 0 0;
+  display: grid;
+  grid-template-columns: repeat(3, 300px);
+  grid-template-rows: 560px;
+  justify-content: space-around;
+  text-align: center;
+  .content-block__photo {
+    margin-left: 10%;
+    width: 80%;
+    height: 560px;
+    object-fit: cover;
+  }
+  .block-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .block-item__button {
+    @include whiteButton;
+  }
+  .block-item__title {
+    @include title;
+  }
+  .block-item__text {
+    @include smallestText(#ffffff);
+  }
+  .block-item__about {
+    @include button;
+  }
+}
+
+.manhattan-comand {
+  margin-top: 150px;
+  text-align: center;
+  .manhattan-comand__button {
+    @include whiteButton;
+  }
+  .manhattan-comand__title {
+    margin-top: 40px;
+    @include title;
+  }
+  .manhattan-blocks {
+    margin-top: 80px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .right-block {
+    .row-item + .row-item {
+      margin-top: 20px;
+    }
+    .row-item {
+      background-color: red;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 40px;
+      height: 35px;
+      width: 356px;
+      gap: 10px;
+      background: rgba(213, 98, 29, 0.1);
+      border-radius: 5px;
+
+      &.active {
+        background-color: #d5621d;
+        height: 180px;
+        width: 356px;
+        display: flex;
+        align-items: flex-start;
+        overflow: hidden;
+
+        .row-item__list-container {
+          margin-top: 20px;
+          display: flex;
+          flex-direction: column;
+          justify-content: space-evenly;
+          li {
+            display: flex;
+            justify-content: flex-start;
+            @include smallestText(#ffffff);
+          }
+        }
+        .row-item__list-container + .row-item__list-container {
+          margin-top: 20px;
+        }
+      }
+
+      .row-item__title {
+        display: flex;
+        justify-content: flex-start;
+        width: 163px;
+        height: 27px;
+        font-family: "Montserrat", sans-serif;
+        font-style: normal;
+        font-weight: 700;
+        font-size: 13px;
+        line-height: 150%;
+        letter-spacing: 0.05em;
+        text-transform: uppercase;
+      }
+      i {
+        border: solid #ffffff;
+        border-width: 0 3px 3px 0;
+        display: inline-block;
+        padding: 3px;
+      }
+      .down {
+        transform: rotate(45deg);
+        -webkit-transform: rotate(45deg);
+      }
+    }
+  }
+
+  .left-block {
+    width: 416px;
+    text-align: center;
+    .left-block__items {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+    }
+    .left-block__title {
+      @include title;
+      font-size: 32px;
+    }
+    .block-item {
+      margin-top: 50px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      overflow: hidden;
+      img {
+        width: 196px;
+        height: 210px;
+        border-radius: 5px;
+        &:hover {
+          transform: scale(1.1);
+        }
+      }
+
+      .block-item__name {
+        @include smallP;
+        font-size: 14px;
+        margin: 30px 0 38px;
+      }
+      .block-item__icons {
+        width: 105px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        font-size: 30px;
+        a:hover {
+          color: #d5621d;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 950px) {
+  .home-block {
+    flex-direction: column;
+    align-items: center;
+    .home-block__back {
+      width: 400px;
+    }
+    .block-container {
+      margin-bottom: 40px;
+    }
+  }
+  .content-block {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    .block-item {
+      text-align: center;
+      padding: 20%;
+      li {
+        margin: 20px 0;
+      }
+      p {
+        margin: 20px 0;
+      }
+    }
+  }
+  .manhattan-comand {
+    margin: 0;
+    .manhattan-blocks {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      .left-block {
+        margin: 70px 0 0;
+      }
+    }
+  }
+}
+@media (max-width: 580px) {
+  .home-block {
+    .block-container {
+      .block-container__elems {
+        .home-block__title {
+          width: 200px;
+          font-size: 24px;
+        }
+      }
+    }
+  }
+}
+@media (max-width: 400px) {
+  .home-block {
+    .block-container {
+      .home-block__back {
+        width: 300px;
+      }
+      .block-container__elems {
+        margin: 0 0 0 20px;
+      }
+    }
+    .list-films {
+      width: 316px;
+      height: 440px;
+      .list-films__container {
+        display: grid;
+        grid-template-columns: repeat(2, 130px);
+        grid-template-rows: repeat(2, 170px);
+        img {
+          width: 130px;
+          height: 170px;
+        }
+        .film5 {
+          width: 286px;
+        }
+      }
+    }
+  }
+  .menu-food {
+    .food-item {
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+      height: 480px;
+      width: 200px;
+      .food-photo {
+        width: 250px;
+        height: 250px;
+      }
+      .food-character {
+        .row {
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          text-align: center;
+          .food-price {
+            margin-top: 10px;
+          }
+          div {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+          }
+        }
+        .food-des {
+          margin-top: 20px;
+          text-align: center;
+        }
+      }
+    }
+  }
+  .block-item {
+    .block-item__button {
+      padding: 2px;
+      font-size: 14px;
+    }
+  }
+  .manhattan-comand {
+    .right-block {
+      .row-item + .row-item {
+        margin-top: 20px;
+      }
+      .row-item {
+        width: 260px;
+        &.active {
+          width: 260px;
+          height: 240px;
+        }
+      }
+    }
+    .manhattan-comand__title {
+      font-size: 24px;
+    }
+    .left-block {
+      .left-block__title {
+        font-size: 18px;
+      }
+      .left-block__items {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+    }
+  }
+  .content-block {
+    .block-item {
+      padding: 10px;
+    }
+  }
+}
