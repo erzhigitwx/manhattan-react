@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/manhattan-react/static/css/main.d3ae4544.css",
-    "main.js": "/manhattan-react/static/js/main.2a6ad797.js",
+    "main.js": "/manhattan-react/static/js/main.44026d8e.js",
     "static/js/478.950ebe7e.chunk.js": "/manhattan-react/static/js/478.950ebe7e.chunk.js",
     "static/css/434.4955fa5c.chunk.css": "/manhattan-react/static/css/434.4955fa5c.chunk.css",
     "static/js/434.fd699078.chunk.js": "/manhattan-react/static/js/434.fd699078.chunk.js",
@@ -45,7 +45,7 @@
     "static/media/food6.jpg": "/manhattan-react/static/media/food6.cd64c9d27ca1276bf14a.jpg",
     "index.html": "/manhattan-react/index.html",
     "main.d3ae4544.css.map": "/manhattan-react/static/css/main.d3ae4544.css.map",
-    "main.2a6ad797.js.map": "/manhattan-react/static/js/main.2a6ad797.js.map",
+    "main.44026d8e.js.map": "/manhattan-react/static/js/main.44026d8e.js.map",
     "478.950ebe7e.chunk.js.map": "/manhattan-react/static/js/478.950ebe7e.chunk.js.map",
     "434.4955fa5c.chunk.css.map": "/manhattan-react/static/css/434.4955fa5c.chunk.css.map",
     "434.fd699078.chunk.js.map": "/manhattan-react/static/js/434.fd699078.chunk.js.map",
@@ -58,6 +58,6 @@
   },
   "entrypoints": [
     "static/css/main.d3ae4544.css",
-    "static/js/main.2a6ad797.js"
+    "static/js/main.44026d8e.js"
   ]
 }
